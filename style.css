@@ -1,0 +1,113 @@
+/*----tags-----------*/
+
+body {
+  background-color: #f2f6f79a;
+}
+li {
+  list-style-type: none;
+}
+
+footer {
+  height: 100%;
+  background-color: #c2c2c248;
+}
+
+/*-------------------*/
+
+.mainImg {
+  background: linear-gradient(
+      to right,
+      #07081be8,
+      #6e868a9a 100%,
+      rgba(228, 219, 219, 0)
+    ),
+    url(/images/zamokLogo.webp) no-repeat center #fff;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.mainText {
+  color: #fff;
+  font-weight: 500;
+  font-size: calc(1.5rem + (3 - 1.7) * ((100vw - 20rem) / (38 - 10)));
+  line-height: calc(1.4 * (1.7rem + (3 - 1.7) * ((80vw - 20rem) / (68 - 20))));
+  max-width: 30rem;
+}
+
+.textSecond {
+  color: #f7bf27;
+  font-weight: 500;
+  max-width: 30rem;
+}
+
+.textLast {
+  color: white;
+  max-width: 30rem;
+}
+
+.navbar-color {
+  background-color: #0f59c9 !important;
+}
+
+.img-size-price {
+  width: 100%;
+  height: 200px;
+}
+
+.img-size-info {
+  width: 454px;
+  height: 354px;
+}
+
+/*---------------Animation------------------*/
+
+.hiden {
+  display: none;
+  opacity: 0;
+  padding-top: -5rem;
+}
+.anim:hover .hiden {
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-name: anim-price;
+  display: block;
+}
+
+@keyframes anim-price {
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*----------------------------------*/
+
+@media (max-width: 768px) {
+  .textSecond {
+    font-size: calc(1.5rem + (3 - 1.7) * ((100vw - 20rem) / (60 - 10)));
+    line-height: calc(
+      1.4 * (1.7rem + (3 - 1.7) * ((100vw - 20rem) / (88 - 20)))
+    );
+  }
+  .textLast {
+    font-size: calc(1.225rem + (4.5 - 1.225) * ((50vw - 20rem) / (100 - 20)));
+  }
+  .img-size-info {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  .info-block {
+    max-width: 100%;
+  }
+
+  .flx-box-mobile {
+    flex-direction: column-reverse !important;
+    justify-content: center;
+    text-align: justify;
+    margin: 0%;
+  }
+}
